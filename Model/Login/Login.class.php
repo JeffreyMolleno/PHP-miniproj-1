@@ -1,7 +1,7 @@
 <?php
 // session_start();
 
-include 'Model/db.inc.php';
+include '../../Model/db.inc.php';
 
 $_SESSION['user'] = '';
 
@@ -33,6 +33,15 @@ class Login
         }
 
         return false;
+    }
+
+    public function signup($pretext, $pass){
+
+        $sql = "INSERT INTO `users` (`id`, `username`, `password`) VALUES (NULL, '$pretext', '$pass')";
+        
+        $res = mysqli_query($this->db,$sql);
+
+        return $res ? true : false;
     }
 
     public function logout_user()

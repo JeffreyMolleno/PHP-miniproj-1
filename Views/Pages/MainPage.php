@@ -1,6 +1,6 @@
 <?
 session_start();
-include '../../Controllers/Login/Logout.inc.php';
+// include '../../Controllers/Login/Logout.inc.php';
 include '../../Controllers/Contacts/contacts.controller.php';
 ?>
 
@@ -70,7 +70,7 @@ include '../../Controllers/Contacts/contacts.controller.php';
                         && isset($datain[4])
                     ) {
                         echo "<tr>
-                            <th scope='row'>$index</th>
+                            <th scope='row'>{index+1}</th>
                             <th >$datain[0]</th>
                             <td>$datain[1]</td>
                             <td>$datain[2]</td>

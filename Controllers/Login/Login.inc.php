@@ -1,14 +1,14 @@
 <?php
-include 'Model/Login/Login.class.php';
+
+include '../../Model/Login/Login.class.php';
 
 $for_login = new Login('users');
 
-if (!empty($_POST['username']) && !empty($_POST['password'])) {
-   $for_login->check_user($_POST['username'], $_POST['password']);
+if (isset($_POST['username']) && isset($_POST['password'])) {
+
+   $check_status = $for_login->check_user($_POST['username'], $_POST['password']);
+  
+   if ($check_status) {
+      echo "success";
+   }
 }
-
-if ($_SESSION['user']) {
-   echo "<script>window.location.href = 'Views/Pages/MainPage.php';</script>";
-}
-
-

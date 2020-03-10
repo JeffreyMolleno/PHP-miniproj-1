@@ -69,6 +69,7 @@ class Contacts
                         . $datain[3] . "*"
                         . $datain[4] . "&\n");
                 }
+                
                 $index++;
             }
         }
