@@ -43,7 +43,7 @@ class Contacts
     }
 
 
-    public function removeData($rindex)
+    public function removeData(int $rindex)
     {
         $gdata = $this->getData();
         $gdata = explode("&", $gdata);
@@ -62,7 +62,7 @@ class Contacts
                 && isset($datain[3])
                 && isset($datain[4])
             ) {
-                if ((int)$rindex !== $index) {
+                if ($rindex !== $index) {
                     fwrite($this->filename, "\n&" . $datain[0] . "*"
                         . $datain[1] . "*"
                         . $datain[2] . "*"
