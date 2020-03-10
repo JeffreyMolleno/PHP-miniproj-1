@@ -1,7 +1,5 @@
 <?php
 session_start();
-$_SESSION['user'] = '';
-// include 'Controllers/Login/Login.inc.php';
 ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?
 session_start();
-// include '../../Controllers/Login/Logout.inc.php';
+include '../../Controllers/Login/Logout.inc.php';
 include '../../Controllers/Contacts/contacts.controller.php';
 ?>
 
@@ -20,7 +20,7 @@ include '../../Controllers/Contacts/contacts.controller.php';
 <body>
     <nav class="navbar navbar-dark bg-primary">
         <!-- Navbar content -->
-        <a class="navbar-brand" href="#">Hidden brand</a>
+        <a class="navbar-brand" href="#"><i class="fa fa-phone-square"></i> &nbsp Contact List</a>
         <ul class="navbar-nav my-2 my-lg-0 menu-list">
             <li class="nav-item logout" name="logout"><a href="?logout=true">Logout</a></li>
         </ul>
@@ -58,10 +58,9 @@ include '../../Controllers/Contacts/contacts.controller.php';
 
                 $gdata = explode("&", $gdata);
                 $index = 0;
-                foreach ($gdata as $val) {
-                    // fwrite($this->filename, $val."\n");                    
+                foreach ($gdata as $val) {                
                     $datain = explode("*", $val);
-
+                    $numref = $index + 1;
                     if (
                         isset($datain[0])
                         && isset($datain[1])
@@ -70,7 +69,7 @@ include '../../Controllers/Contacts/contacts.controller.php';
                         && isset($datain[4])
                     ) {
                         echo "<tr>
-                            <th scope='row'>{index+1}</th>
+                            <th scope='row'>$numref</th>
                             <th >$datain[0]</th>
                             <td>$datain[1]</td>
                             <td>$datain[2]</td>

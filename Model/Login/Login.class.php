@@ -1,9 +1,9 @@
 <?php
-// session_start();
+session_start();
 
 include '../../Model/db.inc.php';
 
-$_SESSION['user'] = '';
+// $_SESSION['user'] = '';
 
 class Login
 {
@@ -27,7 +27,9 @@ class Login
         while ($row = $res->fetch_assoc()) {
 
             if ($row['username'] === $pretext && $row['password'] === $pass) {
+
                 $_SESSION['user'] = $row['username'];
+
                 return true;
             }
         }
