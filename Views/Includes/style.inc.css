@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.login-container {
+    width: 500px;
+    margin: 0 auto;
+    margin-top:10%;
+    border: 1px solid #f3f3f3;
+    padding: 40px 30px;
+    border-radius: 5px;
+}
+
+.form-control{
+    width: 470px;
+}
+
+.logout{
+    color: white;
+}
+
+.logout>a{
+    color: white;
+}
+
+.contacts-container{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #f3f3f3;
+    margin-top: 50px;
+}
+
+.add-contacts{
+    cursor: pointer;
+}
+
+.add-contacts:hover{
+    color: blue;
+}
+
+.title-text{
+    margin-bottom: 20px;
+}
+
+.form-submit{
+    float: right;
+}
